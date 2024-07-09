@@ -1,0 +1,16 @@
+raw_audio_files:
+  type: partitions.PartitionedDataset
+  dataset: whisper_dataset.datasets.whisper_dataset.WhisperDataset
+  path: data/01_raw
+  filename_suffix: ".mp3"
+  load_args:
+    temperature: 0.0
+    response_format: text
+    model: whisper-1,
+    language: pt
+
+fea_sentiment_scores:
+  type: partitions.PartitionedDataset
+  dataset: "json.JSONDataset"
+  filename_suffix: ".json"
+  path: data/04_feature

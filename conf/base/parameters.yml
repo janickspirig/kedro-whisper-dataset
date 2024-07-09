@@ -1,0 +1,5 @@
+openai_args:
+  system_message: You are a friendly assistant that assigns sentiment scores to a conversation.
+  model_kwargs:
+    model: gpt-4o
+    temperature: 0.2
